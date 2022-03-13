@@ -63,28 +63,28 @@
 
 	<repositories>
 		<repository>
-			<id>JavaAppArtifact</id>
-			<url>https://pkgs.dev.azure.com/kbarvind/MLOps/_packaging/MLOpsArtifact/maven/v1</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
+  <id>multicloudguy</id>
+  <url>https://pkgs.dev.azure.com/multicloudguy/_packaging/multicloudguy/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
 	</repositories>
 
 	<distributionManagement>
 		<repository>
-			<id>JavaAppArtifact</id>
-			<url>https://pkgs.dev.azure.com/kbarvind/MLOps/_packaging/MLOpsArtifact/maven/v1</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
+  <id>multicloudguy</id>
+  <url>https://pkgs.dev.azure.com/multicloudguy/_packaging/multicloudguy/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
 	</distributionManagement>
 
 	<!-- Dependencies -->

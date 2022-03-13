@@ -37,14 +37,3 @@ stages:
       inputs:
         pathToPublish: $(Build.ArtifactStagingDirectory)
         artifactName: SampleSpringBootBuild
-    
-
-
-- stage: Artifact
-  displayName: Archive Artifact
-  jobs:  
-  - job: Upload_artifact
-    displayName: Upload artifacts
-    steps:
-    - upload: $(Build.ArtifactStagingDirectory)
-      artifact: drop

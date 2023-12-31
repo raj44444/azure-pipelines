@@ -12,7 +12,7 @@ variables:
      value: false
 
 pool: 
-  vmImage: 'ubuntu-latest'
+  vmImage: 'macOS-latest'
 
 stages:
 - stage: Build

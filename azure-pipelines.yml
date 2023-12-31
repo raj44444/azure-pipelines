@@ -24,7 +24,7 @@ stages:
       inputs:
         SonarQube: 'sonar-connection'
         scannerMode: 'Other'
-        #extraProperties: 'sonar.projectKey=YourProjectKey'
+        extraProperties: 'sonar.projectKey=sqa_3af383bd7dedff2416e3013e85c5bdc70c83b8dd'
     # Publish Quality Gate Result task
     - task: SonarQubePublish@5
       inputs:

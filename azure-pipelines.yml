@@ -11,9 +11,7 @@ variables:
    - name: process.clean
      value: false
 
-pool: 
-  vmImage: 'macOS-latest'
-
+pool: 'my-personal-computer'
 stages:
 - stage: Build
   displayName: Build stage

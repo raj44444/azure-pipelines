@@ -13,6 +13,21 @@ variables:
 
 pool: 'my-personal-computer'
 stages:
+- stage:
+  displayName: Sonar analysis
+  jobs:
+  - job: Sonar
+    steps:
+    - task: SonarQubePrepare@5
+      inputs:
+        SonarQube: 'sonar-connection'
+        scannerMode: 'Other'
+        extraProperties: 'sonar.projectKey=Java-POC_Java-POC_AYy-tRuMjVLFBXaoDorB'
+        #extraProperties: 'sonar.projectName=Java-POC'
+    # Publish Quality Gate Result task
+    - task: SonarQubePublish@5
+      inputs:
+        pollingTimeoutSec: '300'
 - stage: Build
   displayName: Build stage
   jobs:  
@@ -20,15 +35,7 @@ stages:
     displayName: Build Maven Project
     steps:
       # Prepare Analysis Configuration task
-    - task: SonarQubePrepare@5
-      inputs:
-        SonarQube: 'sonar-connection'
-        scannerMode: 'Other'
-        extraProperties: 'sonar.projectKey=sqa_3af383bd7dedff2416e3013e85c5bdc70c83b8dd'
-    # Publish Quality Gate Result task
-    - task: SonarQubePublish@5
-      inputs:
-        pollingTimeoutSec: '300'
+    
     - task: Maven@3
       #env:
       #  JAVA_HOME: /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
